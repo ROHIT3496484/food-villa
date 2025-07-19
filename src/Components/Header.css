@@ -1,0 +1,22 @@
+.header{
+    display : flex;
+    margin: auto;
+    border: 1px solid black;
+}
+.img{
+    height: 130px;
+    
+}
+.list{
+    display: flex;
+    margin-left: auto;
+    font-size: medium;
+    font-style: none;
+    font-weight: 700;
+
+}
+.list>li{
+    padding: 30px;
+    font-size: large;
+    list-style-type: none;
+}
