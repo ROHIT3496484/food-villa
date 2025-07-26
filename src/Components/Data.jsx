@@ -13,6 +13,10 @@ const Data=()=>{
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
   const [filtered, setFiltered] = useState([]);
+
+  //if no dependency array => useEffect is called on every render
+  // if dependency array is empty => useEffect is called on initial render(just once)
+  // if dependency array is [search] => called everytime search is updated
   useEffect(()=>{
    
     fetched();
