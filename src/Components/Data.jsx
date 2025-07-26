@@ -42,7 +42,7 @@ const Data=()=>{
       <div className="classname">
         <input placeholder="Search" onChange={(e)=> setSearch(e.target.value)}></input>
         <button onClick={()=>{
-          const filtereddata = filtered.filter((item)=>item.info.name.toLowerCase().includes(search.toLowerCase()))
+          const filtereddata = data.filter((item)=>item.info.name.toLowerCase().includes(search.toLowerCase()))
           setFiltered(filtereddata)
         }}>Search</button>
       </div>
