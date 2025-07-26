@@ -22,7 +22,7 @@ const Restcard=({restaurantData})=>{
         </h3>
         <div className="esa-rating">
           <h4>{restaurantData.costForTwo}</h4>
-          <h4>{restaurantData.deliveryTime} mins</h4>
+          <h4>{restaurantData.sla.slaString} </h4>
         </div>
         <h6 className="cousine">
           {restaurantData.cuisines}
