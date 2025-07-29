@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { restaurantList } from './Restolist';
+import { Link} from 'react-router-dom';
 import Restcard from './Restcard';
 
 import "./Header.css"
@@ -23,7 +24,7 @@ const Data=()=>{
   },[])
 
   const fetched=async()=>{
-      const res = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING')
+      const res = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
     
    
     const json = await res.json();
@@ -54,8 +55,8 @@ const Data=()=>{
       <div className="reslist">
         {
           filtered.map((restaurant) => (
-            <Restcard restaurantData={restaurant.info} key={restaurant.info?.id } />
-          ))
+            <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id}> <Restcard restaurantData={restaurant.info} key={restaurant.info?.id } />
+           </Link>))
       }
       </div>
     </div>
